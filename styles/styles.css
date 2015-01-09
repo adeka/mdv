@@ -2,45 +2,135 @@ body {
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
-   // cursor: default;
-    font-family: "Bookman", sans-serif;
+    cursor: default;
+    font-family: "Tahoma", sans-serif;
     padding: 0px;
     margin: 0px;
-   // overflow-y: hidden;
     overflow-x: hidden;
-    background-color: #2a2a2a;
+
+    background-color: rgb(10,10,10);
     color : #bbbbbb;
-    margin-top:160px;
 }
 li{
-    //list-style-type: square;
-    list-style-type: none;
+    list-style-type: square;
+    //list-style-type: none;
     margin: 7px;
 }
 
+.noBullets{
+    list-style-type: none;
+}
+
+a{
+    color:#CFB53B;
+    transition: .2s all;
+    text-decoration: none;
+
+}
+a:visited{
+    color:#DAA520;
+}
+
+a:hover{
+    background-color: rgba(255,255,255,.1);
+}
+
+.serviceHeader{
+    font-size: 22px;
+    height : 20px;
+    padding: 0;
+    padding-top: 10px;
+}
+.centerContainer{
+    width : 925px;
+    margin : 0 auto;
+    background-image: url("/img/gradient.png");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    //background-color: rgba(50,0,255,.1);
+}
+
+.left{
+    height: 100%;
+    width : 490px;
+    position: fixed;
+    left : 0;
+    background-image: url("/img/left.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    z-index: -100;
+
+}
+
+.right{
+    height: 100%;
+    width : 490px;
+    position: fixed;
+    right : 0;
+    background-image: url("/img/right.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: -10% 0%;
+    z-index: -100;
+}
+
+.starIcon{
+    padding-right: 5px;
+    width : 25px;
+}
+
+.specialLI{
+    text-shadow: 4px 4px 5px rgba(0,0,0,.25);
+
+    font-size: 25px;
+    //border: 1px solid red;
+background: rgb(243,226,199); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,226,199,1)), color-stop(50%,rgba(193,158,103,1)), color-stop(51%,rgba(182,141,76,1)), color-stop(100%,rgba(233,212,179,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(182,141,76,1) 51%,rgba(233,212,179,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(182,141,76,1) 51%,rgba(233,212,179,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(182,141,76,1) 51%,rgba(233,212,179,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(243,226,199,1) 0%,rgba(193,158,103,1) 50%,rgba(182,141,76,1) 51%,rgba(233,212,179,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3',GradientType=0 ); /* IE6-9 */
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .logo{
-    //border : 1px solid grey;
-    //padding-left: 0px;
-    width:500px;
+    width:600px;
+}
+
+.formText{
+    vertical-align: middle;
 }
 
 .toolbarContainer{
-    //border : 1px solid grey;
-    text-align: center;
-    width: 50%;
-    max-width: 1000px;
+   // text-align: center;
+   //width: 40%;
+    //max-width: 1000px;
     margin: 0 auto;
 }
 
 .toolbarContainer2{
-    //border : 1px solid grey;
     text-align: center;
     width: 40%;
+    min-width: 700px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
+.icon{
+    width : 250px;
+    margin: 0 auto;
+    transition: .2s all;
+}
 
+.icon:hover{
+    background-color: rgba(255,255,255,.1);
+}
+
+.imgColumn{
+    //border : 1px solid red;
+}
 #map1, #map2{
     color: black;
 }
@@ -83,69 +173,115 @@ p{
 
 .row{
     padding: 10px;
-    box-shadow: 0px 0px 25px rgba(0,0,0,.2);
 }
 
+.rim{
+    border-top: 2px solid rgba(255,255,255,.1);
+    border-bottom: 3px solid rgba(0,0,0,.25);
+    border-right: 3px solid rgba(0,0,0,.25);
+    border-left: 3px solid rgba(0,0,0,.25);
+}
 
+.black{
+    background: black;
+}
 .light{
-    background-color: #363636;
+    background: rgba(255,255,255,.05);
 }
 .medium{
     background-color: rgba(34, 34, 34, 0.82);
 }
 .dark{
-    background-color: #101010;
+     background-image: url("/img/grad2.png");
+    background-repeat: repeat-x;
+}
+.darkest{
+    background-color:rgb(10,10,10);
 }
 
 
 .container{
-    width: 80%;
-    max-width: 1000px;
+   // padding: 10px;
+   // width: 80%;
+    max-width: 900px;
     margin: 0 auto;
+    //box-shadow: 0px 0px 25px rgba(0,0,0,.5);
+
+}
+
+.skinny{
+    max-width: 650px;
+}
+
+.center{
+    text-align: center;
 }
 
 
 .header{
+    background-color: rgba(255,255,255,.02);
     font-weight: bold;
     text-align: center;
     color: #d9d9d9;
     font-size: 26px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    text-shadow: 4px 4px 5px rgba(0,0,0,.25);
     padding: 7px;
-    //border-bottom: 1px solid rgba(0,0,0,.2)
+    border-bottom: 3px solid rgba(0,0,0,.25);
+box-shadow: 4px 4px 10px rgba(0,0,0,.1);
 }
 
 .content{
-    margin-left: 30px;
-    padding-bottom: 10px;
+   // max-width: 850px;
+    //margin-left: 30px;
+   // padding-bottom: 10px;
 }
 
 .map{
 
     width : 150px;
     height : 150px;
-    border: 1px solid #828282;
+    border: 3px solid rgb(0,0,0);
     background-color: #262626;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.5);
+}
 
+.aboutTable{
+    max-width: 700px;
+    margin : 0 auto;
+    font-size: 16px;
+}
+.image{
+    width : 250px;
+    border: 2px solid rgba(255,255,255,.1);
+    box-shadow: 4px 4px 10px rgba(0,0,0,.5);
+}
+
+.doctorPhoto{
+    width : 150px;
+    height : 150px;
+    border: 2px solid rgba(255,255,255,.1);
+    //background-color: #262626;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.5);
 }
 
 .locationTable{
     font-size: 20;
     width: 100%;
-    max-width: 900px;
-   // border : 1px solid white;
-     background-color: rgba(0,0,0,.2);
+    min-width: 900px;
+    max-width: 1000px;
+    //border : 1px solid white;
+    // background-color: rgba(0,0,0,.2);
 }
 .doctorsTable{
     font-size: 20;
     width: 100%;
     max-width: 950px;
+    //border : 1px solid red;
 }
 
 td{
-
     padding: 20px;
-      vertical-align: top;
+    vertical-align: top;
 }
 
 /*
