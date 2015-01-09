@@ -1,5 +1,5 @@
 /**
- * Created by gramp_000 on 12/22/14.
+ * Created by Nikita Filatov on 12/22/14.
  */
 function init_map() {
     var myOptions = {zoom: 14, center: new google.maps.LatLng(40.875843, -74.12205289999997), mapTypeId: google.maps.MapTypeId.ROADMAP};
@@ -22,5 +22,14 @@ function init_map() {
 }
 google.maps.event.addDomListener(window, 'load', init_map);
 
-
-
+$(".service").click(function(){
+    //alert($(this).data('open'));
+    if(!$(this).data('open')){
+        $(this).height("100%");
+        $(this).append("<div><p class='info'>" + $(this).data('info') + "</p></div>");
+    }
+    else{
+        $(this).children().remove();
+    }
+    $(this).data('open', !$(this).data('open'));
+});
