@@ -19,6 +19,12 @@ li{
     margin: 7px;
 }
 
+.smallImage{
+    width: 250px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
 .noBullets{
     list-style-type: none;
 }
@@ -293,10 +299,9 @@ box-shadow: 4px 4px 10px rgba(0,0,0,.1);
 }
 
 .service{
+    margin-left: -15px;
     width : 250px;
     padding :10px;
-    height : 20px;
-    transition : .4s all;
 }
 .service:hover{
     background-color: rgba(255,255,255,.1);
