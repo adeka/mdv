@@ -1,4 +1,5 @@
 .hero {
+    //@include bounceIn(1,7);
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
@@ -9,9 +10,9 @@
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
-
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  $hero-image: 'http://40.media.tumblr.com/80879c868aabf316358204cb0acd4a05/tumblr_mrztth5xup1sdyj9lo1_1280.jpg';
+  $hero-image2: "https://farm8.staticflickr.com/7006/6624374227_c5c77be1fa_b.jpg";
+  @include background(url($hero-image2), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
   background-position: top;
   background-repeat: no-repeat;
@@ -55,9 +56,5 @@
       }
     }
 
-    button {
-      @include button(flat, $base-accent-color);
-      padding: 0.7em 1em;
-    }
   }
 }

@@ -1,11 +1,10 @@
 .bullets {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-line-height: 1.5em !default;
-  $base-accent-color: #477DCA !default;
+  $base-accent-color: rgba(72, 133, 204, 0.68) !default;
   $base-link-color: $base-accent-color !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
-
   padding: 0;
 
   h2 {
@@ -31,7 +30,7 @@
   @include display(flex);
   @include flex-wrap(wrap);
   margin-bottom: $base-line-height;
-  margin: 1em;
+  margin: .5em;
   overflow: auto;
 
   .bullet {
@@ -41,11 +40,17 @@
 
   .bullet-icon {
     background: $base-accent-color;
-    border-radius: 50%;
+    border-radius: 25%;
     float: left;
+    color: white;
     height: $icon-bullet-size;
-    padding: $icon-bullet-size / 4;
+    text-align: center;
+    vertical-align: middle;
+    //padding: $icon-bullet-size / 5;
     width: $icon-bullet-size;
+    i {
+        @include vertical-align();
+    }
   }
 
   .bullet-icon-1 {
@@ -53,16 +58,16 @@
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50%);
+    background: $base-accent-color;
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140%);
+    background: $base-accent-color;
   }
 
   .bullet-content {
     margin-left: $icon-bullet-size * 1.4;
-    margin-bottom: 2em;
+    //margin-bottom: 1em;
   }
 
   h2 {

@@ -31,7 +31,7 @@
     @include align-items(stretch);
     @include flex-wrap(wrap);
     clear: both;
-    text-align: center;
+    text-align: left;
 
   .flex-box {
     @include transition (all 0.2s ease-in-out);
@@ -75,6 +75,8 @@
       color: transparentize($flex-box-color, 0.1);
       line-height: 1.5em;
       margin: auto;
+      padding: .6em;
+      text-indent:-.6em;
     }
   }
 

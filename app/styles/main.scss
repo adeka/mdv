@@ -1,11 +1,14 @@
 // bower:scss
 // endbower
+
 @import "bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "neat/app/assets/stylesheets/_neat.scss";
 @import "grid-settings.scss";
 @import "animate.css-scss/animate.scss";
 @import "@functions.scss";
+
 @import "bitters/base";
+
 @import "accordion";
 @import "modal";
 @import "cards";
@@ -16,11 +19,17 @@
 @import "footer";
 @import "titles";
 @import "grid";
+@import "map";
+@import "fade";
+@import "side";
+@import "ribbon";
+//@import "Buttons/css/buttons.css";
+
 
 body {
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-smoothing: subpixel-antialiased;
-    text-rendering: optimizeLegibility;
+    //-webkit-font-smoothing: subpixel-antialiased;
+    //font-smoothing: subpixel-antialiased;
+    //text-rendering: optimizeLegibility;
     max-width: 1140px;
     margin: 0 auto;
     padding: 0px;
