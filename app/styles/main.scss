@@ -32,7 +32,8 @@
 
 
 body {
-  @include linear-gradient(darken($mainColor, 20%), lighten($mainColor, 20%));
+    background: #202020;
+  //@include linear-gradient(darken($mainColor, 20%), lighten($mainColor, 20%));
     -webkit-font-smoothing: subpixel-antialiased;
     font-smoothing: subpixel-antialiased;
     text-rendering: optimizeLegibility;

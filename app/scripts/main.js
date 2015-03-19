@@ -42,6 +42,7 @@ $(window).load(function() {
     $("#loadingScreen").fadeOut("slow");
 })
 //element fading
+/*
 $(document).ready(function() {
     $(window).scroll(function() {
       var elements = $( '*');
@@ -65,3 +66,4 @@ $(document).ready(function() {
       }
     });
 });
+*/
