@@ -1,13 +1,11 @@
-.fade-in-element {
-    margin: 0;
-    padding: 0;
-}
-
 .js-fade-element-hide {
   opacity: 0;
 }
 
 .js-fade-element-show {
   @include transition (all 0.4s ease-in-out);
+  .flex-box {
+    @include bounceIn();
+  }
   opacity: 1;
 }

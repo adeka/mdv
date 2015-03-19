@@ -43,25 +43,25 @@ $(window).load(function() {
 })
 //element fading
 $(document).ready(function() {
-  var element = document.getElementById("js-fadeInElement");
-  $(element).addClass('js-fade-element-hide');
+    $(window).scroll(function() {
+      var elements = $( '*');
+      for(var i =0; i < elements.length; i++){
+        var div = $(elements[i]);
+        div.addClass('js-fade-element-hide');
+        var elementTopToPageTop = div.offset().top;
+        var windowTopToPageTop = $(window).scrollTop();
+        var windowInnerHeight = window.innerHeight;
+        var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
+        var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
+        var distanceFromBottomToAppear = 100;
 
-  $(window).scroll(function() {
-    if( $("#js-fadeInElement").length > 0 ) {
-      var elementTopToPageTop = $(element).offset().top;
-      var windowTopToPageTop = $(window).scrollTop();
-      var windowInnerHeight = window.innerHeight;
-      var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
-      var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
-      var distanceFromBottomToAppear = 200;
-
-      if(elementTopToWindowBottom > distanceFromBottomToAppear) {
-        $(element).addClass('js-fade-element-show');
+        if(elementTopToWindowBottom > distanceFromBottomToAppear) {
+          div.addClass('js-fade-element-show');
+        }
+        else if(elementTopToWindowBottom < 0) {
+          div.removeClass('js-fade-element-show');
+          div.addClass('js-fade-element-hide');
+        }
       }
-      else if(elementTopToWindowBottom < 0) {
-        $(element).removeClass('js-fade-element-show');
-        $(element).addClass('js-fade-element-hide');
-      }
-    }
-  });
+    });
 });

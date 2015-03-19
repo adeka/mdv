@@ -15,10 +15,10 @@
 
   $side-image-background-top: #B5EBEB;
   $side-image-background-bottom: #5DAC5D;
-  $side-image-content-background: #F9F9F9;
+  $side-image-content-background: lighten($mainColor, 46%);
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
   $imgURL : "https://farm2.staticflickr.com/1012/1050414916_fc58eea9a8_b.jpg";
-  background: $side-image-content-background;
+  background-color: $side-image-content-background;
 
   @include media($large-screen) {
     @include row(table);

@@ -5,9 +5,12 @@
 @import "neat/app/assets/stylesheets/_neat.scss";
 @import "grid-settings.scss";
 @import "animate.css-scss/animate.scss";
+
 @import "@functions.scss";
 
 @import "bitters/base";
+
+@import "colors/sass/colors.scss";
 
 @import "accordion";
 @import "modal";
@@ -23,13 +26,16 @@
 @import "fade";
 @import "side";
 @import "ribbon";
-//@import "Buttons/css/buttons.css";
+@import "Buttons/scss/buttons.scss";
+@import "saffron/saffron/saffron.scss";
+@import "hover/scss/hover.scss";
 
 
 body {
-    //-webkit-font-smoothing: subpixel-antialiased;
-    //font-smoothing: subpixel-antialiased;
-    //text-rendering: optimizeLegibility;
+  @include linear-gradient(darken($mainColor, 20%), lighten($mainColor, 20%));
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
     max-width: 1140px;
     margin: 0 auto;
     padding: 0px;

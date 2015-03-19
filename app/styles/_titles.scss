@@ -1,12 +1,14 @@
 .bullets {
   ///////////////////////////////////////////////////////////////////////////////////
+  $base-bg : $mainColor;
   $base-line-height: 1.5em !default;
-  $base-accent-color: rgba(72, 133, 204, 0.68) !default;
+  $base-accent-color: darken($base-bg, 8%) !default;
   $base-link-color: $base-accent-color !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  padding: 0;
+  $base-font-color: darken($base-bg, 80%);
+  padding: .75em;
+  color: $base-font-color;
 
+  background-color: $base-bg;
   h2 {
     margin: 0;
   }
@@ -16,12 +18,15 @@
   }
 
   p {
-    color: $base-font-color;
     line-height: $base-line-height;
   }
 
   img {
     max-width: 100%;
+  }
+
+  i{
+    color: lighten($base-bg, 20%);
   }
   //////////////////////////////////////////////////////////////////////////////////
 
@@ -30,7 +35,8 @@
   @include display(flex);
   @include flex-wrap(wrap);
   margin-bottom: $base-line-height;
-  margin: .5em;
+  margin: 0;
+  //margin: .5em 0 .5em 0;
   overflow: auto;
 
   .bullet {
@@ -42,7 +48,6 @@
     background: $base-accent-color;
     border-radius: 25%;
     float: left;
-    color: white;
     height: $icon-bullet-size;
     text-align: center;
     vertical-align: middle;
