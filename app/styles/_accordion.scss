@@ -39,10 +39,11 @@
   $accordion-menu-list-padding: ($base-spacing / 2) $gutter;
 
   background-color: $accordion-menu-background;
+
   border: $accordion-menu-border;
-  margin-bottom: $base-spacing;
 
   li {
+    //@include linear-gradient(to top, lighten($mainColor, 5%),  lighten($mainColor, 10%));
     border-bottom: $accordion-menu-border;
 
     > a {
@@ -71,7 +72,7 @@
 
     li {
       background-color: $accordion-menu-sub-background;
-
+      @include linear-gradient(to top, $mainColor,  $mainColor);
       &:first-child {
         border-top: $accordion-menu-border;
         box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;

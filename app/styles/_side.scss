@@ -30,7 +30,7 @@
     background-size: cover;
     border-bottom: $side-image-border;
     display: block;
-    min-height: 12em;
+  //  min-height: 12em;
     padding: 3em;
 
     @include media($large-screen) {
@@ -43,7 +43,7 @@
 
   .side-image-content {
     @include span-columns(12);
-    padding: 1em 1em 4em 1em;
+    padding: 1em 1em 1em 1em;
 
     @include media($large-screen) {
       @include span-columns(8);
@@ -67,8 +67,9 @@
 
     p {
       color: gray;
-      margin-bottom: 3em;
+      margin-bottom: 1em;
     }
+
   }
   @include reset-display();
 }

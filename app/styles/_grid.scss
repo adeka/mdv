@@ -8,8 +8,8 @@
   $base-background-color: white !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-
   p {
+
     line-height: 1.5em;
   }
 
@@ -24,24 +24,22 @@
   $grid-item-border-size: 9px;
   $grid-item-columns: 6;
   $grid-item-big-columns: 8;
-  $grid-item-color: white;
-  $grid-item-height: 14em;
+  $grid-item-color: darken($mainColor, 70%);
+  $grid-item-height: 25em;
 
   @include clearfix;
 
   .grid-item {
+    //border: .3em solid shade($mainColor, 40%);
     @include transition (all 0.2s ease-in-out);
-//    background: $grid-item-background;
-    border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
-    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
-    border-top: 0;
+    //background: $grid-item-background;
+    //margin: .2em;
     cursor: pointer;
     float: left;
     height: $grid-item-height;
     overflow: hidden;
     outline: none;
-    padding: 2em;
+    padding: 1em;
     text-align: center;
     width: 100%;
 
@@ -49,12 +47,15 @@
       @include grid-item-columns($grid-item-columns);
     }
 
+    //background-color: $mainColor;
+    //box-shadow: 0 2px 4px darken(black, 10%);
+    @include linear-gradient(to top, lighten($mainColor, 37%), lighten($mainColor, 45%));
+
     @for $i from 1 through length($grid-item-colors) { // assign colors from $grid-item-colors list
       &:nth-child(#{$i}) {
-        $background-from-list: nth($grid-item-colors, $i);
-        background-color: $background-from-list;
-        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%);
+        //$background-from-list: $mainColor;
 
+        /*
         &:focus,
         &:hover {
           background-color: darken($background-from-list, 10%);
@@ -62,15 +63,21 @@
           background-position: top;
           background-size: cover;
         }
+        */
       }
     }
   }
 
   .grid-item img {
-      display: block;
-      height: 3em;
-      margin-bottom: 1em;
-      margin: auto;
+    @include span-columns(5 of 12);
+    height: auto;
+    //  @include vertical-align();
+    border-radius: .15em;
+    @include padding(.3em);
+    @include linear-gradient(to top, darken($mainColor, 15%), $mainColor);
+    box-shadow: 0px 5px 10px 10px rgba(0,0,0,.1) !important;
+    border: 1px solid darken($mainColor, 20%);
+
     }
 
   .grid-item h1 {
@@ -80,12 +87,14 @@
     }
 
   .grid-item p {
-      margin: auto;
+      //margin: auto;
       color: transparentize($grid-item-color, 0.3);
-
+      /*
       @include media($medium-screen) {
         max-width: 70%;
       }
+      */
+      text-align : left;
     }
 
   .grid-item-big {

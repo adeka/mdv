@@ -1,13 +1,14 @@
 #loadingScreen{
     position: fixed;
-    top: 0;
     width: 100%;
     height: 100%;
+    left: 0;
     background-color: $base-background-color;
     z-index: 9999999;
 }
 
 .spinner {
+  @include vertical-align();
   margin: 100px auto;
   width: 170px;
   height: 70px;

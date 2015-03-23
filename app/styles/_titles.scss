@@ -9,8 +9,11 @@
   color: $base-font-color;
 
   background-color: $base-bg;
+  @include linear-gradient(to top, lighten($mainColor, 35%), lighten($mainColor, 50%));
   h2 {
     margin: 0;
+    text-shadow: 0px 1px 2px lighten($mainColor, 80%);
+
   }
 
   li {
@@ -42,32 +45,26 @@
   .bullet {
     @include flex-basis(20em);
     @include flex-grow(1);
+
   }
 
   .bullet-icon {
-    background: $base-accent-color;
+    border-bottom: darken($mainColor, 50%);
+    text-shadow: 0px 2px 2px lighten($mainColor, 80%);
     border-radius: 25%;
     float: left;
     height: $icon-bullet-size;
     text-align: center;
     vertical-align: middle;
     //padding: $icon-bullet-size / 5;
+    @include linear-gradient(to top, lighten($mainColor, 25%), lighten($mainColor, 35%));
+
     width: $icon-bullet-size;
+
     i {
+      color: darken($mainColor, 70%);
         @include vertical-align();
     }
-  }
-
-  .bullet-icon-1 {
-    background: $base-accent-color;
-  }
-
-  .bullet-icon-2 {
-    background: $base-accent-color;
-  }
-
-  .bullet-icon-3 {
-    background: $base-accent-color;
   }
 
   .bullet-content {

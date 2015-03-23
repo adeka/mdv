@@ -2,6 +2,8 @@
   @include display(flex);
   @include flex-wrap(wrap);
   @include justify-content(space-between);
+  padding-top: 1em;
+  
 }
 
 .card {
@@ -38,6 +40,7 @@
   position: relative;
   position: relative;
   //max-width: 530px;
+  @include linear-gradient(to top, lighten($mainColor, 40%), lighten($mainColor, 55%));
 
   .card-image {
     overflow: hidden;
@@ -54,7 +57,7 @@
 
   .card-header {
     @include transition (all 0.2s ease-in-out);
-    background-color: $card-header-background;
+    //background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;

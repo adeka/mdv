@@ -1,8 +1,10 @@
 // bower:scss
-// endbower
-
 @import "bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "neat/app/assets/stylesheets/_neat.scss";
+// endbower
+
+@import "bourbon/app/assets/stylesheets/bourbon";
+@import "neat/app/assets/stylesheets/neat";
 @import "grid-settings.scss";
 @import "animate.css-scss/animate.scss";
 
@@ -32,7 +34,7 @@
 
 
 body {
-    background: #202020;
+    background: shade($mainColor, 40%);
   //@include linear-gradient(darken($mainColor, 20%), lighten($mainColor, 20%));
     -webkit-font-smoothing: subpixel-antialiased;
     font-smoothing: subpixel-antialiased;
@@ -44,4 +46,27 @@ body {
     width: 100%;
     height: 100%;
     //background: $blueGrey;
+}
+
+.buttonWrap{
+  min-width: auto;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.outer{
+  @include outer-container;
+}
+
+.half{
+  @include span-columns(6);
+}
+
+.over{
+  @include omega();
+}
+
+.full{
+  @include span-columns(12);
+  margin-top: 1em;
 }

@@ -8,7 +8,6 @@
 
   $hero-background-top: lighten($mainColor, 25%);
   $hero-background-bottom: darken($mainColor, 25%);
-  $hero-color: lighten($mainColor, 75%);
   $gradient-angle: 10deg;
   $hero-image: 'http://40.media.tumblr.com/80879c868aabf316358204cb0acd4a05/tumblr_mrztth5xup1sdyj9lo1_1280.jpg';
   $hero-image2: "https://farm8.staticflickr.com/7006/6624374227_c5c77be1fa_b.jpg";
@@ -17,12 +16,12 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
 
 
   .hero-logo img {
     @include bounceIn(1s,1s);
-    height: 4em;
+    height: 5em;
     margin-bottom: 1em;
   }
 
@@ -30,9 +29,9 @@
 
     @include outer-container;
     @include clearfix;
-    color: $hero-color;
+    //color: $hero-color;
     margin: auto;
-    padding: 3.5em;
+    padding: 1em;
     text-align: center;
 
     .hero-copy {
@@ -43,23 +42,26 @@
 
         font-size: 1.6em;
         margin-bottom: 0.5em;
-
+        color:  lighten($mainColor, 40%);
+        /*
         @include media($large-screen) {
           font-size: 1.8em;
         }
+        */
       }
 
       p {
         @include fadeIn(1s,2.5s);
-
+        color: lighten($mainColor, 40%);
         font-weight: 200;
         line-height: 1.4em;
-        margin: 0 auto 3em auto;
-
+      //  margin: 0 auto 3em auto;
+      /*
         @include media($large-screen) {
           font-size: 1.1em;
           max-width: 40%;
         }
+        */
       }
     }
 
