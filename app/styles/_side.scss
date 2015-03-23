@@ -8,7 +8,7 @@
   $base-font-color: $dark-gray !default;
 
   p {
-    color: $base-font-color;
+    color: darken($mainColor, 25%);
     line-height: $base-line-height;
   }
   //////////////////////////////////////////////////////////////////////////////////
@@ -19,6 +19,7 @@
   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
   $imgURL : "https://farm2.staticflickr.com/1012/1050414916_fc58eea9a8_b.jpg";
   background-color: $side-image-content-background;
+  margin-bottom: .5em;
 
   @include media($large-screen) {
     @include row(table);
@@ -52,11 +53,12 @@
 
     h1 {
       margin-bottom: 0.9em;
+      color: darken($mainColor, 25%);
     }
 
     h4 {
-      background: #BBB;
-      color: white;
+      background: darken($mainColor, 0%);
+      color: lighten($mainColor, 30%);
       display: inline-block;
       font-size: 0.75em;
       font-weight: 800;
@@ -66,7 +68,7 @@
     }
 
     p {
-      color: gray;
+      color: darken($mainColor, 25%);
       margin-bottom: 1em;
     }
 

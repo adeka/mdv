@@ -21,35 +21,40 @@
   $grid-items-background: $base-background-color;
   $grid-item-background: desaturate($base-accent-color, 30%);
   $grid-item-colors: $mainColor, lighten($mainColor, 10%), darken($mainColor, 10%);
-  $grid-item-border-size: 9px;
+  $grid-item-border-size: 0px;
   $grid-item-columns: 6;
-  $grid-item-big-columns: 8;
+  $grid-item-big-columns: 6;
   $grid-item-color: darken($mainColor, 70%);
   $grid-item-height: 25em;
 
   @include clearfix;
 
   .grid-item {
+     border: 1px solid red;
+    //margin: .em;
     //border: .3em solid shade($mainColor, 40%);
     @include transition (all 0.2s ease-in-out);
     //background: $grid-item-background;
     //margin: .2em;
     cursor: pointer;
     float: left;
-    height: $grid-item-height;
+    //height: $grid-item-height;
     overflow: hidden;
     outline: none;
-    padding: 1em;
     text-align: center;
     width: 100%;
-
+    //@include padding(.25em);
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
     }
 
     //background-color: $mainColor;
     //box-shadow: 0 2px 4px darken(black, 10%);
-    @include linear-gradient(to top, lighten($mainColor, 37%), lighten($mainColor, 45%));
+    div {
+        @include padding(.35em);
+        border-radius: .2em;
+        @include linear-gradient(to top, lighten($mainColor, 37%), lighten($mainColor, 45%));
+    }
 
     @for $i from 1 through length($grid-item-colors) { // assign colors from $grid-item-colors list
       &:nth-child(#{$i}) {

@@ -34,7 +34,7 @@
 
 
 body {
-    background: shade($mainColor, 40%);
+    background: desaturate(shade($mainColor, 50%), 50%);
   //@include linear-gradient(darken($mainColor, 20%), lighten($mainColor, 20%));
     -webkit-font-smoothing: subpixel-antialiased;
     font-smoothing: subpixel-antialiased;

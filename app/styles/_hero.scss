@@ -52,9 +52,10 @@
 
       p {
         @include fadeIn(1s,2.5s);
-        color: lighten($mainColor, 40%);
+        color: lighten($mainColor, 60%);
         font-weight: 200;
         line-height: 1.4em;
+        //text-align: left;
       //  margin: 0 auto 3em auto;
       /*
         @include media($large-screen) {
