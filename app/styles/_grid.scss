@@ -30,7 +30,7 @@
   @include clearfix;
 
   .grid-item {
-     border: 1px solid red;
+     //border: 1px solid red;
     //margin: .em;
     //border: .3em solid shade($mainColor, 40%);
     @include transition (all 0.2s ease-in-out);
@@ -38,21 +38,22 @@
     //margin: .2em;
     cursor: pointer;
     float: left;
-    //height: $grid-item-height;
     overflow: hidden;
     outline: none;
     text-align: center;
     width: 100%;
-    //@include padding(.25em);
+    @include padding(.35em);
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
+      height: 20em;
     }
 
     //background-color: $mainColor;
     //box-shadow: 0 2px 4px darken(black, 10%);
     div {
+        height: 100%;
         @include padding(.35em);
-        border-radius: .2em;
+        //border-radius: .2em;
         @include linear-gradient(to top, lighten($mainColor, 37%), lighten($mainColor, 45%));
     }
 
@@ -74,13 +75,15 @@
   }
 
   .grid-item img {
+    max-width: 8em;
     @include span-columns(5 of 12);
     height: auto;
+    //width: auto;
     //  @include vertical-align();
     border-radius: .15em;
     @include padding(.3em);
     @include linear-gradient(to top, darken($mainColor, 15%), $mainColor);
-    box-shadow: 0px 5px 10px 10px rgba(0,0,0,.1) !important;
+    //box-shadow: 0px 5px 10px 10px rgba(0,0,0,.1) !important;
     border: 1px solid darken($mainColor, 20%);
 
     }

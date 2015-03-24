@@ -1,9 +1,10 @@
+
 var bittersMap = (function () {
   var myLatlng = new google.maps.LatLng(59.342457, 18.057340),
       mapCenter1 = new google.maps.LatLng(59.340458, 18.057340),
       mapCenter2 = new google.maps.LatLng(59.340458, 18.057340),
-      mapCanvas1 = document.getElementById(`map1`),
-      mapCanvas2 = document.getElementById(`map2`),
+      mapCanvas1 = document.getElementById('map1'),
+      mapCanvas2 = document.getElementById('map2'),
       mapOptions1 = {
         center: mapCenter1,
         zoom: 13,
