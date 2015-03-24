@@ -4,7 +4,7 @@
   $base-line-height: 1.5em !default;
   $base-accent-color: darken($base-bg, 8%) !default;
   $base-link-color: $base-accent-color !default;
-  $base-font-color: darken($base-bg, 80%);
+  $base-font-color: darken($base-bg, 40%);
   padding: .75em;
   color: $base-font-color;
 
@@ -50,7 +50,7 @@
 
   .bullet-icon {
     border-bottom: darken($mainColor, 50%);
-    text-shadow: 0px 2px 2px lighten($mainColor, 60%);
+    text-shadow: 0px 1px 1px lighten($mainColor, 50%);
     border-radius: 25%;
     float: left;
     height: $icon-bullet-size;
@@ -62,7 +62,7 @@
     width: $icon-bullet-size;
 
     i {
-      color: darken($mainColor, 70%);
+      color: darken($mainColor, 30%);
         @include vertical-align();
     }
   }

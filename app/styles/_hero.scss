@@ -11,8 +11,8 @@
   $gradient-angle: 10deg;
   $hero-image: 'http://40.media.tumblr.com/80879c868aabf316358204cb0acd4a05/tumblr_mrztth5xup1sdyj9lo1_1280.jpg';
   $hero-image2: "https://farm8.staticflickr.com/7006/6624374227_c5c77be1fa_b.jpg";
-  @include background(url($hero-image2), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: #324766;
+  //@include background(url($hero-image2), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  background-color: desaturate(darken($mainColor, 25%), 5%);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +21,7 @@
 
   .hero-logo img {
     @include bounceIn(1s,1s);
-    height: 5em;
+    height: 4em;
     margin-bottom: 1em;
   }
 

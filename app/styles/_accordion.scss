@@ -28,7 +28,7 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $accordion-menu-border-color: $base-border-color;
+  $accordion-menu-border-color: desaturate(darken($mainColor, 35%), 35%);
   $accordion-menu-color: $base-font-color;
   $accordion-menu-border: 1px solid $accordion-menu-border-color;
   $accordion-menu-background: lighten($accordion-menu-border-color, 10%);
@@ -43,10 +43,10 @@
   border: $accordion-menu-border;
 
   li {
-    //@include linear-gradient(to top, lighten($mainColor, 5%),  lighten($mainColor, 10%));
     border-bottom: $accordion-menu-border;
 
     > a {
+      @include linear-gradient(to top, lighten($mainColor, 35%), lighten($mainColor, 50%));
       color: $accordion-menu-color;
       display: block;
       padding: $accordion-menu-list-padding;
@@ -63,7 +63,7 @@
 
     &:focus,
     &:hover {
-      background-color: $accordion-menu-hover;
+      //background-color: $accordion-menu-hover;
     }
   }
 
@@ -71,8 +71,8 @@
     display: none;
 
     li {
-      background-color: $accordion-menu-sub-background;
-      @include linear-gradient(to top, $mainColor,  $mainColor);
+        background-color: lighten(desaturate($mainColor, 65%), 10%);
+
       &:first-child {
         border-top: $accordion-menu-border;
         box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
@@ -80,7 +80,7 @@
 
       &:focus,
       &:hover {
-        background-color: $accordion-menu-sub-hover;
+        //background-color: $accordion-menu-sub-hover;
       }
     }
   }
